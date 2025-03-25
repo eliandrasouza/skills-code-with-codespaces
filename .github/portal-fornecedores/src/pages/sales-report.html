@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Vendas</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/vendors/chart.js"></script>
+    <script src="../assets/js/charts.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Include header component -->
+        <div id="header-placeholder"></div>
+    </header>
+    <aside>
+        <!-- Include sidebar component -->
+        <div id="sidebar-placeholder"></div>
+    </aside>
+    <main>
+        <h1>Relatório de Vendas</h1>
+        <div id="sales-report-container">
+            <canvas id="salesChart"></canvas>
+            <div id="sales-details">
+                <h2>Detalhes das Vendas</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>Quantidade</th>
+                            <th>Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sales-data">
+                        <!-- Dados de vendas serão inseridos aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- Include footer component -->
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        // Função para carregar os componentes
+        async function loadComponents() {
+            const headerResponse = await fetch('../components/header.html');
+            const headerHtml = await headerResponse.text();
+            document.getElementById('header-placeholder').innerHTML = headerHtml;
+
+            const sidebarResponse = await fetch('../components/sidebar.html');
+            const sidebarHtml = await sidebarResponse.text();
+            document.getElementById('sidebar-placeholder').innerHTML = sidebarHtml;
+
+            const footerResponse = await fetch('../components/footer.html');
+            const footerHtml = await footerResponse.text();
+            document.getElementById('footer-placeholder').innerHTML = footerHtml;
+        }
+
+        // Chamar a função para carregar os componentes
+        loadComponents();
+    </script>
+</body>
+</html>

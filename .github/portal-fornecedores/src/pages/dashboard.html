@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle - Fornecedores</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <script src="../assets/js/charts.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+</head>
+<body>
+    <header>
+        <!-- Include header component -->
+        <div id="header-placeholder"></div>
+    </header>
+    <aside>
+        <!-- Include sidebar component -->
+        <div id="sidebar-placeholder"></div>
+    </aside>
+    <main>
+        <h1>Bem-vindo ao Painel de Controle</h1>
+        <section id="sales-info">
+            <h2>Informações de Vendas</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+        <section id="sales-report">
+            <h2>Relatórios Detalhados</h2>
+            <button id="view-report">Ver Relatório</button>
+        </section>
+    </main>
+    <footer>
+        <!-- Include footer component -->
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        // Load components dynamically
+        document.getElementById('header-placeholder').innerHTML = await (await fetch('../components/header.html')).text();
+        document.getElementById('sidebar-placeholder').innerHTML = await (await fetch('../components/sidebar.html')).text();
+        document.getElementById('footer-placeholder').innerHTML = await (await fetch('../components/footer.html')).text();
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Fornecedores</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Include header component -->
+        <div id="header-placeholder"></div>
+    </header>
+
+    <main>
+        <h1>Cadastro de Fornecedores</h1>
+        <form id="registration-form">
+            <div>
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div>
+                <label for="confirm-password">Confirmar Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="message"></div>
+    </main>
+
+    <footer>
+        <!-- Include footer component -->
+        <div id="footer-placeholder"></div>
+    </footer>
+
+    <script src="../assets/js/validation.js"></script>
+    <script src="../assets/js/registration.js"></script>
+    <script>
+        // Load header and footer components
+        document.getElementById('header-placeholder').innerHTML = '<!-- Header HTML goes here -->';
+        document.getElementById('footer-placeholder').innerHTML = '<!-- Footer HTML goes here -->';
+    </script>
+</body>
+</html>
